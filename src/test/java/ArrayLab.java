@@ -1,5 +1,6 @@
+import java.util.Scanner;
 
-    public class ArrayLab {
+public class ArrayLab {
         public static void main(String[] args) {
             int[] anArray;
 
@@ -27,5 +28,18 @@
             System.out.println("Element at index 8 : " + anArray[8]);
             System.out.println("Element at index 9 : " + anArray[9]);
 
+            try{
+                Scanner myScan = new Scanner(System.in);
+                System.out.println("Please enter a number: ");
+                anArray[10] = myScan.nextInt();
+                System.out.println("Element at index 10: " + anArray[10]);
+            }
+
+            catch(ArrayIndexOutOfBoundsException e){
+                System.out.println("Out of Bounds");
+                System.out.println();
+            }
+
         }
-    }
+}
+
